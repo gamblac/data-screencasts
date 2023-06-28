@@ -57,6 +57,7 @@ majors_processed %>%
 
 ```{r}
 majors_processed %>%
+  arrange(desc(Median)) %>% 
   filter(Sample_size >= 100) %>%
   head(20) %>%
   ggplot(aes(Major, Median, color = Major_category)) +
